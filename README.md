@@ -15,6 +15,7 @@ CLI Text Editor v1.0
 ## BEFORE YOU USE THIS PLEASE READ THIS
 This project is still in early development, so expect some bugs and missing features.
 So if you want to contribute, please fork this repository and create a pull request.
+Feel free to contribute to this project, whether it's fixing bugs, adding new features, or improving the documentation.
 
 ## HOW TO USE
 ### REQUIRED
