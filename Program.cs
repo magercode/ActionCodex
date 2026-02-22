@@ -10,8 +10,8 @@ namespace ActionCodex
             
             try
             {
-                var editor = new TextEditorWindow();
-                Application.Run(editor);
+                var edi = new TextEditorWindow();
+                Application.Run(edi);
             }
             finally
             {
