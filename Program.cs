@@ -10,7 +10,7 @@ namespace ActionCodex
             
             try
             {
-                var edi = new TextEditorWindow();
+                var edi = new ActionCodexEditor();
                 Application.Run(edi);
             }
             finally
