@@ -1,7 +1,7 @@
 <div align="center">
 
 # Action Codex
-CLI Text Editor v1.0
+CLI Text Editor v1.0.1
 
 ![ssan](ss.png)
 

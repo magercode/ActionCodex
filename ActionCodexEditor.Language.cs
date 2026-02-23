@@ -104,7 +104,7 @@ namespace ActionCodex
                 "MsgOK" => "OK",
 
                 "AboutTitle" => "About",
-                "AboutVersion" => "Action Codex v1.0",
+                "AboutVersion" => "Action Codex v1.0.1",
                 "AboutGithub" => "Github: Github.com/MagerCode",
                 "AboutCopyright" => "© 2026 All Rights Reserved",
 
@@ -191,7 +191,7 @@ namespace ActionCodex
                 "MsgOK" => "OK",
 
                 "AboutTitle" => "Tentang",
-                "AboutVersion" => "Action Codex v1.0",
+                "AboutVersion" => "Action Codex v1.0.1",
                 "AboutGithub" => "Github: Github.com/MagerCode",
                 "AboutCopyright" => "© 2026 Hak Cipta Dilindungi",
 
@@ -267,7 +267,7 @@ namespace ActionCodex
                 "MsgOK" => "OK",
 
                 "AboutTitle" => "О программе",
-                "AboutVersion" => "Action Codex v1.0",
+                "AboutVersion" => "Action Codex v1.0.1",
                 "AboutGithub" => "Github: Github.com/MagerCode",
                 "AboutCopyright" => "© 2026 Все права защищены",
 
@@ -343,7 +343,7 @@ namespace ActionCodex
                 "MsgOK" => "OK",
 
                 "AboutTitle" => "Über",
-                "AboutVersion" => "Action Codex v1.0",
+                "AboutVersion" => "Action Codex v1.0.1",
                 "AboutGithub" => "Github: Github.com/MagerCode",
                 "AboutCopyright" => "© 2026 Alle Rechte vorbehalten",
 

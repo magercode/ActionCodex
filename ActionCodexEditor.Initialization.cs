@@ -160,15 +160,15 @@ namespace ActionCodex
                 Visible = true,
                 Items =
                   new StatusItem[] {
-              new StatusItem(Key.CtrlMask | Key.N,
+                    new(Key.CtrlMask | Key.N,
                              GetLocalizedString("StatusNew"), NewFile),
-              new StatusItem(Key.CtrlMask | Key.O,
+                    new(Key.CtrlMask | Key.O,
                              GetLocalizedString("StatusOpen"), OpenFile),
-              new StatusItem(Key.CtrlMask | Key.S,
+                    new(Key.CtrlMask | Key.S,
                              GetLocalizedString("StatusSave"), SaveFile),
-              new StatusItem(Key.F1, GetLocalizedString("StatusHelp"),
+                    new(Key.F1, GetLocalizedString("StatusHelp"),
                              ShowShortcuts),
-              new StatusItem(Key.CtrlMask | Key.Q,
+                    new(Key.CtrlMask | Key.Q,
                              GetLocalizedString("StatusQuit"), Quit),
                   }
             };

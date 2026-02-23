@@ -4,10 +4,12 @@ namespace ActionCodex
 {
     public class TabContext
     {
-        public TabView.Tab Tab { get; set; } = null!;
-        public TextView Editor { get; set; } = null!;
-        public TextView LineNumbers { get; set; } = null!;
-        public string FilePath { get; set; } = "";
+        public required TabView.Tab Tab { get; set; }
+        public required TextView Editor { get; set; }
+        public required TextView LineNumbers { get; set; }
+        public required string FilePath { get; set; }
         public bool IsModified { get; set; }
+        public bool WaitingForCommand { get; set; }
+        public char? PendingCommand { get; set; }
     }
 }

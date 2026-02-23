@@ -6,24 +6,30 @@ namespace ActionCodex
     {
         private void HandleKeyDown(View.KeyEventEventArgs e, TabContext ctx)
         {
-            if ((e.KeyEvent.IsCtrl && e.KeyEvent.Key == Key.S))
+            //fix: check if the Ctrl modifier is set AND the key is S
+            if ((e.KeyEvent.Key & Key.CtrlMask) != 0 && (e.KeyEvent.Key & Key.S) == Key.S)
             {
                 SaveFile();
                 e.Handled = true;
             }
-            else if ((e.KeyEvent.IsCtrl && e.KeyEvent.Key == Key.N))
+            else if ((e.KeyEvent.Key & Key.CtrlMask) != 0 && (e.KeyEvent.Key & Key.N) == Key.N)
             {
                 NewFile();
                 e.Handled = true;
             }
-            else if ((e.KeyEvent.IsCtrl && e.KeyEvent.Key == Key.O))
+            else if ((e.KeyEvent.Key & Key.CtrlMask) != 0 && (e.KeyEvent.Key & Key.O) == Key.O)
             {
                 OpenFile();
                 e.Handled = true;
             }
-            else if ((e.KeyEvent.IsCtrl && e.KeyEvent.Key == Key.W))
+            else if ((e.KeyEvent.Key & Key.CtrlMask) != 0 && (e.KeyEvent.Key & Key.W) == Key.W)
             {
                 CloseFile();
+                e.Handled = true;
+            }
+            else if ((e.KeyEvent.Key & Key.CtrlMask) != 0 && (e.KeyEvent.Key & Key.Q) == Key.Q)
+            {
+                Quit();
                 e.Handled = true;
             }
         }
