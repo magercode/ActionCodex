@@ -1,0 +1,14 @@
+[package]
+name = "action-codex"
+description = "A terminal-based code editor for Rust."
+authors = ["magercode"]
+version = "1.3.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+arboard = "3.6.1"
+crossterm = "0.29.0"
+rand = "0.10.0"
+ratatui = "0.30.0"
+sha2 = "0.10.9"
