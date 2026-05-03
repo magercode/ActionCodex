@@ -476,8 +476,20 @@ pub fn run(
             }
 
             match key.code {
-                KeyCode::Esc => break,
-                KeyCode::Char('q') if key.modifiers.contains(KeyModifiers::CONTROL) => break,
+                KeyCode::Esc => {
+                    if tabs.has_unsaved_changes() {
+                        status_message = String::from("Masih ada perubahan yang belum disimpan! Simpan dulu dengan Ctrl+S");
+                    } else {
+                        break;
+                    }
+                }
+                KeyCode::Char('q') if key.modifiers.contains(KeyModifiers::CONTROL) => {
+                    if tabs.has_unsaved_changes() {
+                        status_message = String::from("Masih ada perubahan yang belum disimpan! Simpan dulu dengan Ctrl+S");
+                    } else {
+                        break;
+                    }
+                }
                 KeyCode::F(1) => {
                     help_dialog_open = true;
                     status_message = String::from("Bantuan dibuka");
@@ -521,9 +533,13 @@ pub fn run(
                     status_message = String::from("Tab baru dibuat");
                 }
                 KeyCode::Char('w') if key.modifiers.contains(KeyModifiers::CONTROL) => {
-                    tabs.close_active_tab();
-                    focus = ui::FocusPane::Editor;
-                    status_message = format!("Tab ditutup, aktif: {}", tabs.active_tab_title());
+                    if tabs.active_tab_is_dirty() {
+                        status_message = String::from("Tab memiliki perubahan yang belum disimpan! Simpan dulu dengan Ctrl+S");
+                    } else {
+                        tabs.close_active_tab();
+                        focus = ui::FocusPane::Editor;
+                        status_message = format!("Tab ditutup, aktif: {}", tabs.active_tab_title());
+                    }
                 }
                 KeyCode::Char('b') if key.modifiers.contains(KeyModifiers::CONTROL) => {
                     show_file_tree = !show_file_tree;

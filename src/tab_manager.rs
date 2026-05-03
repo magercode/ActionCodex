@@ -66,6 +66,14 @@ impl TabManager {
         self.tabs[self.active].dirty = true;
     }
 
+    pub fn active_tab_is_dirty(&self) -> bool {
+        self.tabs[self.active].dirty
+    }
+
+    pub fn has_unsaved_changes(&self) -> bool {
+        self.tabs.iter().any(|tab| tab.dirty)
+    }
+
     pub fn new_tab(&mut self) {
         self.untitled_count += 1;
         let title = format!("untitled-{}", self.untitled_count);
